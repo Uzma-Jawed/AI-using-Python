@@ -1,136 +1,258 @@
-# 👕 Fashion-MNIST Image Classification using CNN
+# 🤖 AI Using Python
 
-A deep learning project that classifies clothing images from the Fashion-MNIST dataset using a **Convolutional Neural Network (CNN)** built with **TensorFlow/Keras**.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-5A9?style=for-the-badge)
 
-The model is trained on grayscale images of 10 different clothing categories and achieves **90.99% test accuracy** through an improved CNN architecture with Batch Normalization, Dropout, Early Stopping, and Model Checkpointing.
+A collection of hands-on exercises completed during the **AI Using Python** course offered by **DigiSkills.pk**.
 
----
-
-## 📌 Project Overview
-
-This project demonstrates the complete workflow of building an image classification model using Deep Learning.
-
-The notebook covers:
-
-* Loading the Fashion-MNIST dataset
-* Data preprocessing and normalization
-* Building a CNN model
-* Training with validation
-* Preventing overfitting
-* Evaluating model performance
-* Visualizing predictions
-* Displaying misclassified images
+This repository demonstrates my learning journey from Python programming fundamentals to building Machine Learning and Deep Learning models using industry-standard Python libraries.
 
 ---
 
-## 🛠️ Technologies Used
+## 📚 Course Overview
+
+Throughout this course, I learned how to:
+
+* Write clean Python programs
+* Apply Object-Oriented Programming (OOP)
+* Process and analyze datasets using Pandas
+* Build Machine Learning models with Scikit-learn
+* Develop Deep Learning models using TensorFlow and Keras
+* Evaluate model performance using standard metrics
+
+---
+
+## 🛠️ Technologies & Libraries
 
 * Python
-* TensorFlow / Keras
+* Jupyter Notebook
+* NumPy
+* Pandas
+* Scikit-learn
+* TensorFlow
+* Keras
+* Matplotlib
+* Seaborn
+
+---
+
+## 📂 Repository Structure
+
+```text
+AI-using-Python/
+│
+├── AIusingPythonEx1.ipynb
+├── AIusingPythonEx3.ipynb #Ex2+Ex3 combined
+├── AiUsingPython_Ex4.ipynb
+└── README.md
+```
+
+---
+
+# 📘 Exercise 1 – Python Programming Fundamentals
+
+This notebook focuses on strengthening Python programming and logical problem-solving skills.
+
+### Topics Covered
+
+* User Input
+* Variables
+* Conditional Statements (`if`, `elif`, `else`)
+* Loops (`for`)
+* User-Defined Functions
+* Lists
+* Dictionaries
+* Object-Oriented Programming (OOP)
+
+### Tasks
+
+### 1️⃣ Salary Tax Calculator
+
+A Python program that calculates salary tax based on user input and predefined tax conditions.
+
+**Concepts Used**
+
+* User Input
+* Conditional Statements
+* Functions
+
+---
+
+### 2️⃣ Word Length Dictionary
+
+Creates a dictionary where each word is mapped to its corresponding length.
+
+Example:
+
+```python
+{"Python": 6, "AI": 2, "Machine": 7}
+```
+
+**Concepts Used**
+
+* Dictionary
+* Loop
+* String Handling
+
+---
+
+### 3️⃣ Chat System using OOP
+
+A simple chat system implemented using Object-Oriented Programming concepts.
+
+**Concepts Used**
+
+* Classes
+* Objects
+* Methods
+* Encapsulation
+
+---
+
+# 📊 Exercise 2 – Data Preparation & Processing
+
+This notebook introduces data preprocessing using Pandas.
+
+### Libraries
+
+* Pandas
+* NumPy
+
+### Dataset
+
+* House Price Prediction Dataset
+
+### Tasks
+
+* Load CSV Dataset
+* Explore Dataset
+* Handle Missing Values
+* Data Cleaning
+* Data Preparation
+* Basic Data Analysis
+
+---
+
+# 🤖 Exercise 3 – Machine Learning
+
+Continuation of Exercise 2 by building a Machine Learning model.
+
+### Libraries
+
+* Scikit-learn
+
+### Model
+
+* Linear Regression
+
+### Workflow
+
+* Import Dataset
+* Feature Selection
+* Train-Test Split
+* Model Training
+* Prediction
+* Model Evaluation
+
+### Evaluation Metrics
+
+* MAE (Mean Absolute Error)
+* MSE (Mean Squared Error)
+* RMSE (Root Mean Squared Error)
+* R² Score
+
+---
+
+# 👕 Exercise 4 – Fashion MNIST CNN Classification
+
+A Deep Learning project that classifies Fashion MNIST images using a Convolutional Neural Network (CNN).
+
+### Libraries
+
+* TensorFlow
+* Keras
 * NumPy
 * Matplotlib
 * Seaborn
-* Scikit-learn
 
----
+### TensorFlow Components
 
-## 📂 Dataset
+* Layers
+* Models
+* EarlyStopping
+* ModelCheckpoint
 
-The project uses the **Fashion-MNIST** dataset provided by TensorFlow.
+### Evaluation
 
-It contains:
-
-* 60,000 training images
-* 10,000 testing images
-* Image size: 28 × 28 grayscale
-* 10 clothing categories
-
----
-
-## 🧠 CNN Architecture
-
-The model consists of:
-
-* 3 Convolutional Layers
-* Batch Normalization
-* Max Pooling
-* Flatten Layer
-* Dense Hidden Layer (128 neurons)
-* Dropout (0.4)
-* Softmax Output Layer (10 classes)
-
-Additional training features:
-
-* Adam Optimizer
-* Sparse Categorical Crossentropy Loss
-* Early Stopping
-* Model Checkpoint
-
----
-
-## 📈 Results
-
-**Test Accuracy:** **90.99%**
-
-The model performs well on most clothing categories.
-
-Some prediction errors occur between visually similar classes such as:
-
-* Shirt
-* Coat
-* Pullover
-* T-shirt/Top
-
----
-
-## 📊 Visualizations
-
-The notebook includes:
-
-* Sample dataset images
-* Training vs Validation Accuracy
-* Training vs Validation Loss
 * Confusion Matrix
 * Classification Report
-* Model Predictions
-* Misclassified Images
+* Accuracy Visualization
+
+### Deep Learning Workflow
+
+* Load Fashion MNIST Dataset
+* Data Preprocessing
+* Build CNN Model
+* Train the Model
+* Validate Performance
+* Evaluate Results
+* Predict Clothing Categories
 
 ---
 
-## 🚀 How to Run
+# 🎯 Skills Demonstrated
 
-1. Clone this repository
+* Python Programming
+* Problem Solving
+* Object-Oriented Programming
+* Data Cleaning
+* Data Preprocessing
+* Exploratory Data Analysis
+* Machine Learning
+* Linear Regression
+* Model Evaluation
+* Deep Learning
+* Convolutional Neural Networks (CNN)
+* Data Visualization
+
+---
+
+# 🚀 How to Run
+
+1. Clone this repository.
 
 ```bash
 git clone https://github.com/Uzma-Jawed/AI-using-Python.git
 ```
 
-2. Install the required libraries
+2. Navigate to the project directory.
 
 ```bash
-pip install tensorflow numpy matplotlib seaborn scikit-learn
+cd AI-using-Python
 ```
 
-3. Open the notebook
+3. Install the required libraries.
 
 ```bash
-AiUsingPython_Ex4.ipynb
+pip install numpy pandas matplotlib seaborn scikit-learn tensorflow
 ```
 
-4. Run all cells.
+4. Open the notebooks using Jupyter Notebook or Google Colab.
 
 ---
 
-## 🎯 Learning Outcomes
+## 📜 Course
 
-Through this project, I learned:
+**AI Using Python**
 
-* Image preprocessing
-* Building CNNs using TensorFlow/Keras
-* Improving model performance with Batch Normalization and Dropout
-* Preventing overfitting using Early Stopping
-* Evaluating classification models
-* Visualizing deep learning results
+Offered by **DigiSkills.pk**
 
 ---
 
@@ -138,10 +260,6 @@ Through this project, I learned:
 
 **Uzma Jawed**
 
-Aspiring AI & Data Science Developer
+Aspiring AI & Data Science Developer passionate about Python, Machine Learning, Deep Learning, Data Analysis, Technical Writing, and Open Source learning.
 
-Currently learning Machine Learning, Deep Learning, FastAPI, Streamlit, and Technical Writing while building practical AI projects.
-
----
-
-⭐ If you found this project useful, consider giving it a star!
+If you found this repository helpful, consider giving it a ⭐.
